@@ -1,10 +1,9 @@
 const TelegramApi = require("node-telegram-bot-api");
+const { StartView, ChooseMuscleGroupView } = require("./views");
 
 require("dotenv").config();
 
-const TOKEN = process.env.TOKEN;
-
-const bot = new TelegramApi(TOKEN, { polling: true });
+const bot = new TelegramApi(process.env.TOKEN, { polling: true });
 
 bot.setMyCommands([
   { command: "/start", description: "Start using the Viking Training Bot" },
@@ -14,71 +13,36 @@ bot.setMyCommands([
   },
 ]);
 
-const startOptions = {
-  reply_markup: JSON.stringify({
-    inline_keyboard: [
-      [{ text: "👊 Start exercising", callback_data: "/choosemusclegroup" }],
-    ],
-  }),
-};
-
-const chooseMuscleGroutOptions = {
-  reply_markup: JSON.stringify({
-    inline_keyboard: [
-      [
-        { text: "💪 Arms", callback_data: "arms" },
-        { text: "💪 Shoulders", callback_data: "shoulders" },
-      ],
-      [
-        { text: "💪 Chest", callback_data: "chest" },
-        { text: "💪 Core", callback_data: "core" },
-      ],
-      [
-        { text: "💪 Back", callback_data: "back" },
-        { text: "💪 Legs and Glutes", callback_data: "legs_and_glutes" },
-      ],
-    ],
-  }),
-};
-
 bot.on("message", (msg) => {
-  const chatId = msg.chat.id;
-  const text = msg.text;
-
-  switch (text) {
+  switch (msg.text) {
     case "/start":
-      bot.sendMessage(
-        chatId,
-        `Hello, ${msg.from.first_name} ${msg.from.last_name}! Click «Start exercising», choose a muscle group and start work!`,
-        startOptions
-      );
+      StartView(bot, msg);
       break;
     case "/choosemusclegroup":
-      bot.sendMessage(
-        chatId,
-        "Pick a muscle group you want to work on!",
-        chooseMuscleGroutOptions
-      );
+      ChooseMuscleGroupView(bot, msg);
       break;
     default:
-      bot.sendMessage(chatId, "I don’t understand you. Choose some command!");
+      bot.sendMessage(
+        msg.chat.id,
+        "I don’t understand you. Choose some command!"
+      );
       break;
   }
 });
 
 bot.on("callback_query", (msg) => {
   switch (msg.data) {
-    case "arms":
+    case "/armsexercises":
       break;
-    case "shoulders":
+    case "/shouldersexercises":
       break;
-    case "chest":
+    case "/chestexercises":
       break;
-    case "core":
+    case "/coreexercises":
       break;
-    case "back":
+    case "/backexercises":
       break;
-    case "legs_and_glutes":
+    case "/legs_and_glutesexercises":
       break;
     default:
       break;
