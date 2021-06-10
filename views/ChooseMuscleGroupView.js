@@ -1,5 +1,5 @@
 module.exports = (bot, message) => {
-  const chatId = message.chat.id;
+  const chatId = message.data ? message.message.chat.id : message.chat.id;
 
   const options = {
     reply_markup: JSON.stringify({

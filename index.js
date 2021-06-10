@@ -38,17 +38,8 @@ bot.on("message", (msg) => {
 
 bot.on("callback_query", (msg) => {
   switch (msg.data) {
-    case "/armsexercises":
-      break;
-    case "/shouldersexercises":
-      break;
-    case "/chestexercises":
-      break;
-    case "/coreexercises":
-      break;
-    case "/backexercises":
-      break;
-    case "/legs_and_glutesexercises":
+    case "/choosemusclegroup":
+      ChooseMuscleGroupView(bot, msg);
       break;
     default:
       break;
