@@ -11,9 +11,15 @@ bot.setMyCommands([
     command: "/choosemusclegroup",
     description: "Select the muscle group you want to work on",
   },
+  {
+    command: "/stop",
+    description: "Stop training",
+  },
 ]);
 
 bot.on("message", (msg) => {
+  const chatId = msg.chat.id;
+
   switch (msg.text) {
     case "/start":
       StartView(bot, msg);
@@ -21,11 +27,11 @@ bot.on("message", (msg) => {
     case "/choosemusclegroup":
       ChooseMuscleGroupView(bot, msg);
       break;
+    case "/stop":
+      bot.sendMessage(chatId, "Well done! See you soon!");
+      break;
     default:
-      bot.sendMessage(
-        msg.chat.id,
-        "I don’t understand you. Choose some command!"
-      );
+      bot.sendMessage(chatId, "I don’t understand you. Choose some command!");
       break;
   }
 });
