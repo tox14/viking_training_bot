@@ -5,23 +5,60 @@ module.exports = (bot, message) => {
     reply_markup: JSON.stringify({
       inline_keyboard: [
         [
-          { text: "💪 Arms", callback_data: "/armsexercises" },
-          { text: "💪 Shoulders", callback_data: "/shouldersexercises" },
+          {
+            text: "💪 Arms",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "arms",
+            }),
+          },
+          {
+            text: "💪 Shoulders",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "shoulders",
+            }),
+          },
         ],
         [
-          { text: "💪 Chest", callback_data: "/chestexercises" },
-          { text: "💪 Core", callback_data: "/coreexercises" },
+          {
+            text: "💪 Chest",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "chest",
+            }),
+          },
+          {
+            text: "💪 Core",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "core",
+            }),
+          },
         ],
         [
-          { text: "💪 Back", callback_data: "/backexercises" },
+          {
+            text: "💪 Back",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "back",
+            }),
+          },
           {
             text: "💪 Legs and Glutes",
-            callback_data: "/legsandglutexerciseses",
+            callback_data: JSON.stringify({
+              command: "/exercises",
+              type: "legsandglut",
+            }),
           },
         ],
       ],
     }),
   };
 
-  bot.sendMessage(chatId, "Pick a muscle group you want to work on!", options);
+  return bot.sendMessage(
+    chatId,
+    "Pick a muscle group you want to work on!",
+    options
+  );
 };

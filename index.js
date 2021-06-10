@@ -1,5 +1,5 @@
 const TelegramApi = require("node-telegram-bot-api");
-const { StartView, ChooseMuscleGroupView } = require("./views");
+const { StartView, ChooseMuscleGroupView, ExerciseView } = require("./views");
 
 require("dotenv").config();
 
@@ -37,11 +37,23 @@ bot.on("message", (msg) => {
 });
 
 bot.on("callback_query", (msg) => {
-  switch (msg.data) {
+  const chatId = msg.message.chat.id;
+  const command = msg.data[0] === "{" ? JSON.parse(msg.data).command : msg.data;
+
+  switch (command) {
     case "/choosemusclegroup":
       ChooseMuscleGroupView(bot, msg);
+      break;
+    case "/exercises":
+      ExerciseView(bot, msg);
+      break;
+    case "/stop":
+      bot.sendMessage(chatId, "Well done! See you soon!");
       break;
     default:
       break;
   }
 });
+
+bot.on("error", (err) => console.error("error", err));
+bot.on("polling_error", (err) => console.error("polling_error", err));

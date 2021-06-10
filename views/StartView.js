@@ -9,7 +9,7 @@ module.exports = (bot, message) => {
     }),
   };
 
-  bot.sendMessage(
+  return bot.sendMessage(
     chatId,
     `Hello, ${message.from.first_name} ${message.from.last_name}! Click «Start exercising», choose a muscle group and start work!`,
     options
