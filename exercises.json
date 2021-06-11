@@ -109,5 +109,19 @@
     { "name": "Standing Cable Rope Lat Pushdown", "image": "resources/Standing+Cable+Rope+Lat+Pushdown.png" },
     { "name": "Smith Machine Deadlifts", "image": "resources/Smith+Machine+Deadlifts_.jpg" }
   ],
-  "legsandglut": []
+  "legsandglut": [
+    { "name": "Glute Bridge", "image": "resources/Glute+Bridges.jpg" },
+    { "name": "Barbell Hip Thrust", "image": "resources/Barbell+Hip+Thrust.png" },
+    { "name": "Mountain Climbers", "image": "resources/Mountain+Climbers.jpg" },
+    { "name": "Barbell Stiff Leg Deadlifts", "image": "resources/Stiff+Leg+Deadlifts.jpg" },
+    { "name": "Dumbbell Deadlifts", "image": "resources/Dumbbell+Deadlifts.png" },
+    { "name": "Sumo Deadlift", "image": "resources/Sumo+Deadlift.jpg" },
+    { "name": "Leg Extensions", "image": "resources/Leg+Extensions.jpg" },
+    { "name": "Lying Hamstring Curls", "image": "resources/Lying+Hamstring+Curls.jpg" },
+    { "name": "Dumbbell Lunges", "image": "resources/Dumbbell+Lunges.jpg" },
+    { "name": "Leg Press Machine", "image": "resources/Leg+Press+Machine.jpg" },
+    { "name": "Bodyweight Jump Squats", "image": "resources/Bodyweight+Jump+Squats.png" },
+    { "name": "Sumo Squats", "image": "resources/Sumo+Squats.png" },
+    { "name": "Standing Dumbbell Calf Raises", "image": "resources/Standing+Dumbbell+Calf+Raises.jpg" }
+  ]
 }
