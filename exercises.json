@@ -36,7 +36,21 @@
     { "name": "Standing Cable Upright Rows", "image": "resources/Cable+Upright+Rows.jpg" },
     { "name": "Standing Narrow-Grip Upright Rows", "image": "resources/Standing+Narrow-Grip+Upright+Rows.png" }
   ],
-  "chest": [],
+  "chest": [
+    { "name": "Incline Dumbbell Chest Press", "image": "resources/Incline+Dumbbell+Chest+Press.jpg" },
+    { "name": "Incline Smith Machine Chest Press", "image": "resources/Incline+Smith+Machine+Press.jpg" },
+    { "name": "Flat Barbell Chest Press", "image": "resources/Flat+Barbell+Chest+Press.jpg" },
+    { "name": "Decline Dumbbell Chest Press", "image": "resources/Decline+Dumbbell+Chest+Press.jpg" },
+    { "name": "Incline Dumbbell Fly", "image": "resources/Incline+Dumbbell+Fly.jpg" },
+    { "name": "Flat Dumbbell Fly", "image": "resources/Flat+Dumbbell+Fly.jpg" },
+    { "name": "Seated Pec Fly Machine", "image": "resources/Seated+Pec+Fly+Machine.jpg" },
+    { "name": "Cable Crossovers", "image": "resources/Cable+Crossovers.jpg" },
+    { "name": "Low Cable Pec Fly", "image": "resources/Low+Cable+Pec+Fly.jpg" },
+    { "name": "Chest Dips", "image": "resources/Chest+Dips.png" },
+    { "name": "Burpees", "image": "resources/Burpees.jpg" },
+    { "name": "Clock Push Ups", "image": "resources/Narrow-Hand+Push+Ups.png" },
+    { "name": "Wide-Hand Push Up", "image": "resources/Wide-Hand+Push+Up.jpg" }
+  ],
   "core": [],
   "back": [],
   "legsandglut": []
