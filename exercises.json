@@ -51,7 +51,30 @@
     { "name": "Clock Push Ups", "image": "resources/Narrow-Hand+Push+Ups.png" },
     { "name": "Wide-Hand Push Up", "image": "resources/Wide-Hand+Push+Up.jpg" }
   ],
-  "core": [],
+  "core": [
+    { "name": "Bench V-Sit Crunches", "image": "resources/Bench+V-Sit+Crunches.jpg" },
+    { "name": "Raised Legs Cross Body Crunches", "image": "resources/Raised+Legs+Cross+Body+Crunches.jpg" },
+    { "name": "Decline Sit Ups", "image": "resources/Decline+Sit+Ups.jpg" },
+    { "name": "Decline Crunch", "image": "resources/Decline+Crunch.jpg" },
+    { "name": "Decline Crunch With Twist", "image": "resources/Decline+Crunch+With+Twist.jpg" },
+    { "name": "Jack Knife Situps", "image": "resources/Jack+Knife+Situps.png" },
+    { "name": "Air Bike", "image": "resources/Air+Bike.png" },
+    { "name": "Lying Ankle Taps", "image": "resources/Lying+Ankle+Taps.jpg" },
+    { "name": "Lying Flat Bench Leg Raises", "image": "resources/Lying+Flat+Bench+Leg+Raises.png" },
+    { "name": "Lying Flat Bench Knee Raises", "image": "resources/Lying+Flat+Bench+Knee+Raises.png" },
+    { "name": "Lying Leg Raise", "image": "resources/Lying+Leg+Raise.png" },
+    { "name": "Knee Raises", "image": "resources/Knee+Raises.jpg" },
+    { "name": "Dumbbell Side Bend", "image": "resources/Dumbbell+Side+Bend.jpg" },
+    { "name": "Oblique Raises", "image": "resources/Oblique+Raises.jpg" },
+    { "name": "Side Plank", "image": "resources/Side+Plank.png" },
+    { "name": "Elbow Plank", "image": "resources/Prone+Plank.png" },
+    { "name": "Leg Raise and Hold", "image": "resources/Leg+Raise+and+Hold.png" },
+    { "name": "Cocoons", "image": "resources/Cocoons.png" },
+    { "name": "Sit Up", "image": "resources/Sit+Up.jpg" },
+    { "name": "Reverse Crunch", "image": "resources/Reverse+Crunch.jpg" },
+    { "name": "Crunches", "image": "resources/Crunches.jpg" },
+    { "name": "Tuck Crunch", "image": "resources/Tuck+Crunch.png" }
+  ],
   "back": [],
   "legsandglut": []
 }
