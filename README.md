@@ -1,6 +1,6 @@
 # Telegram bot «Viking Training»
 
-See example: [@VikingTrainingBot](https://t.me/@VikingTrainingBot)
+See example: [@VikingTrainingBot](https://t.me/VikingTrainingBot)
 
 ## Description
 
