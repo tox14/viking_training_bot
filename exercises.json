@@ -94,6 +94,20 @@
     { "name": "Crunches", "image": "resources/Crunches.jpg" },
     { "name": "Tuck Crunch", "image": "resources/Tuck+Crunch.png" }
   ],
-  "back": [],
+  "back": [
+    { "name": "Assisted Wide Grip Overhand Chin Ups", "image": "resources/Assisted+Wide+Grip+Overhand+Chin-Ups.jpg" },
+    { "name": "Assisted Close Grip Underhand Chin-Ups", "image": "resources/Assisted+Close+Grip+Underhand+Chin-Ups.png" },
+    { "name": "Wide Overhand Grip Lat Pulldown", "image": "resources/Overhand+Grip+Lat+Pulldown.jpg" },
+    { "name": "Narrow Underhand Grip Lat Pulldown", "image": "resources/Underhand+Grip+Lat+Pulldown.jpg" },
+    { "name": "Incline Bench Dumbbell Rows", "image": "resources/Incline+Dumbbell+Rows.jpg" },
+    { "name": "Dumbbell Bent Over Rows", "image": "resources/Dumbbell+Bent+Over+Rows.jpg" },
+    { "name": "Seated Cable Row", "image": "resources/Seated+Cable+Row.jpg" },
+    { "name": "Seated Cable Row Machine", "image": "resources/Seated+Cable+Row+Machine.jpg" },
+    { "name": "One Arm Dumbbell Row On Bench", "image": "resources/One+Arm+Dumbbell+Row.jpg" },
+    { "name": "Hyperextensions", "image": "resources/Hyperextensions.jpg" },
+    { "name": "Standing Cable Bar Lat Pushdown", "image": "resources/Standing+Cable+Lat+Pushdown.jpg" },
+    { "name": "Standing Cable Rope Lat Pushdown", "image": "resources/Standing+Cable+Rope+Lat+Pushdown.png" },
+    { "name": "Smith Machine Deadlifts", "image": "resources/Smith+Machine+Deadlifts_.jpg" }
+  ],
   "legsandglut": []
 }
