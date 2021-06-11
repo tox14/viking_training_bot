@@ -1,5 +1,24 @@
 {
-  "arms": [],
+  "arms": [
+    { "name": "One Arm Concentration Curls", "image": "resources/One+Arm+Concentration+Curls.jpg" },
+    { "name": "Seated Incline Dumbbell Biceps Hammer Curl", "image": "resources/Seated+Incline+Dumbbell+Biceps+Hammer+Curl.png" },
+    { "name": "Seated Incline Dumbbell Biceps Curl", "image": "resources/Seated+Incline+Dumbbell+Biceps+Curl.jpg" },
+    { "name": "Standing Cable Rope Hammer Curl", "image": "resources/Standing+Cable+Rope+Hammer+Curl.png" },
+    { "name": "Standing Biceps Cable Curl", "image": "resources/Standing+Biceps+Cable+Curl.png" },
+    { "name": "Barbell Biceps Preacher Curl", "image": "resources/Barbell+Biceps+Preacher+Curl.jpg" },
+    { "name": "Standing Dumbbell Inner Biceps Curl", "image": "resources/Standing+Dumbbell+Inner+Biceps+Curl.png" },
+    { "name": "Standing Alternate Dumbbell Biceps Curls", "image": "resources/Standing+Alternate+Dumbbell+Biceps+Curls.png" },
+    { "name": "Wide Grip Standing EZ Bar Curl", "image": "resources/Standing+EZ+Bar+Curls.jpg" },
+    { "name": "Narrow-Grip Standing Barbell Biceps Curl", "image": "resources/Narrow-Grip+Standing+Barbell+Biceps+Curl.png" },
+    { "name": "Seated Two Arm Overhead Dumbbell Triceps Extensions", "image": "resources/Two+Arm+Overhead+Seated+Triceps+Extensions.jpg" },
+    { "name": "Standing Two Arm Overhead Dumbbell Triceps Extensions", "image": "resources/Standing+Two+Arm+Overhead+Dumbbell+Triceps+Extensions.png" },
+    { "name": "Cable Bar Triceps Pushdown", "image": "resources/Cable+Bar+Triceps+Pushdown.jpg" },
+    { "name": "Standing One Arm Triceps Pushdowns", "image": "resources/Standing+One+Arm+Tricep+Pushdowns.png" },
+    { "name": "Lying Dumbbell Triceps Extensions", "image": "resources/Lying+Dumbbell+Triceps+Extension.jpg" },
+    { "name": "Palms Down Barbell Wrist Curl", "image": "resources/Palms+Down+Barbell+Wrist+Curl.jpg" },
+    { "name": "Barbell Bench Palms Up Wrist Curl", "image": "resources/Barbell+Bench+Palms+Up+Wrist+Curl.png" },
+    { "name": "Seated Palms Up Wrist Curl", "image": "resources/Seated+Palms+Up+Wrist+Curl.png" }
+  ],
   "shoulders": [
     { "name": "Seated Smith Machine Shoulder Press", "image": "resources/Smith+Machine+Shoulder+Press.jpg" },
     { "name": "Seated Shoulder Press Machine", "image": "resources/Shoulder+Press+Machine.jpg" },
