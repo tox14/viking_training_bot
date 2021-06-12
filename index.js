@@ -4,6 +4,7 @@ const {
   ChooseMuscleGroupView,
   ExerciseView,
   StopView,
+  WrongCommandView,
 } = require("./views");
 
 require("dotenv").config();
@@ -23,8 +24,6 @@ bot.setMyCommands([
 ]);
 
 bot.on("message", (msg) => {
-  const chatId = msg.chat.id;
-
   switch (msg.text) {
     case "/start":
       StartView(bot, msg);
@@ -36,7 +35,7 @@ bot.on("message", (msg) => {
       StopView(bot, msg);
       break;
     default:
-      bot.sendMessage(chatId, "I don’t understand you. Choose some command!");
+      WrongCommandView(bot, msg);
       break;
   }
 });
