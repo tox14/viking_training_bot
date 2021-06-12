@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const TelegramApi = require("node-telegram-bot-api");
 const {
   StartView,
@@ -6,8 +8,6 @@ const {
   StopView,
   WrongCommandView,
 } = require("./views");
-
-require("dotenv").config();
 
 const bot = new TelegramApi(process.env.TOKEN, { polling: true });
 
