@@ -1,6 +1,6 @@
 const exercises = require("../exercises.json");
 
-module.exports = (bot, message) => {
+module.exports = async (bot, message) => {
   const chatId = message.message.chat.id;
   const type = JSON.parse(message.data).type;
 
@@ -36,6 +36,6 @@ module.exports = (bot, message) => {
   };
 
   if (type) {
-    bot.sendPhoto(chatId, exercise.image, options);
+    await bot.sendPhoto(chatId, exercise.image, options);
   }
 };

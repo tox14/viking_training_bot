@@ -1,4 +1,4 @@
-module.exports = (bot, message) => {
+module.exports = async (bot, message) => {
   const chatId = message.data ? message.message.chat.id : message.chat.id;
 
   const options = {
@@ -56,7 +56,7 @@ module.exports = (bot, message) => {
     }),
   };
 
-  return bot.sendMessage(
+  await bot.sendMessage(
     chatId,
     "Pick a muscle group you want to work on!",
     options

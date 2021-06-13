@@ -1,5 +1,5 @@
-module.exports = (bot, message) => {
+module.exports = async (bot, message) => {
   const chatId = message.chat.id;
 
-  bot.sendMessage(chatId, "I don’t understand you. Choose some command!");
+  await bot.sendMessage(chatId, "I don’t understand you. Choose some command!");
 };

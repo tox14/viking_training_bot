@@ -23,35 +23,35 @@ bot.setMyCommands([
   },
 ]);
 
-bot.on("message", (msg) => {
+bot.on("message", async (msg) => {
   switch (msg.text) {
     case "/start":
-      StartView(bot, msg);
+      await StartView(bot, msg);
       break;
     case "/choosemusclegroup":
-      ChooseMuscleGroupView(bot, msg);
+      await ChooseMuscleGroupView(bot, msg);
       break;
     case "/stop":
-      StopView(bot, msg);
+      await StopView(bot, msg);
       break;
     default:
-      WrongCommandView(bot, msg);
+      await WrongCommandView(bot, msg);
       break;
   }
 });
 
-bot.on("callback_query", (msg) => {
+bot.on("callback_query", async (msg) => {
   const command = msg.data[0] === "{" ? JSON.parse(msg.data).command : msg.data;
 
   switch (command) {
     case "/choosemusclegroup":
-      ChooseMuscleGroupView(bot, msg);
+      await ChooseMuscleGroupView(bot, msg);
       break;
     case "/exercises":
-      ExerciseView(bot, msg);
+      await ExerciseView(bot, msg);
       break;
     case "/stop":
-      StopView(bot, msg);
+      await StopView(bot, msg);
       break;
     default:
       break;
