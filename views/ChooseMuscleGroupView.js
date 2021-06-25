@@ -3,56 +3,13 @@ module.exports = async (bot, message) => {
 
   const options = {
     reply_markup: JSON.stringify({
-      inline_keyboard: [
-        [
-          {
-            text: "💪 Arms",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "arms",
-            }),
-          },
-          {
-            text: "💪 Shoulders",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "shoulders",
-            }),
-          },
-        ],
-        [
-          {
-            text: "💪 Chest",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "chest",
-            }),
-          },
-          {
-            text: "💪 Core",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "core",
-            }),
-          },
-        ],
-        [
-          {
-            text: "💪 Back",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "back",
-            }),
-          },
-          {
-            text: "💪 Legs and Glutes",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type: "legsandglut",
-            }),
-          },
-        ],
+      keyboard: [
+        ["💪 Arms", "💪 Shoulders"],
+        ["💪 Chest", "💪 Core"],
+        ["💪 Back", "💪 Legs and Glutes"],
       ],
+      one_time_keyboard: true,
+      resize_keyboard: true,
     }),
   };
 

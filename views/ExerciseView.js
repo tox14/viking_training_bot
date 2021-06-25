@@ -1,8 +1,8 @@
 const exercises = require("../exercises.json");
 
 module.exports = async (bot, message) => {
-  const chatId = message.message.chat.id;
-  const type = JSON.parse(message.data).type;
+  const chatId = message.chat.id;
+  const type = message.text.split("💪 ")[1].replace(/ /g, "").toLowerCase();
 
   const exercisesForSelectedType = exercises[type];
   const exercise =

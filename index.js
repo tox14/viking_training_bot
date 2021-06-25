@@ -27,6 +27,14 @@ bot.on("message", async (msg) => {
     case "👊 Start exercising":
       await ChooseMuscleGroupView(bot, msg);
       break;
+    case "💪 Arms":
+    case "💪 Shoulders":
+    case "💪 Chest":
+    case "💪 Core":
+    case "💪 Back":
+    case "💪 Legs and Glutes":
+      await ExerciseView(bot, msg);
+      break;
     case "/stop":
       await StopView(bot, msg);
       break;
@@ -37,14 +45,11 @@ bot.on("message", async (msg) => {
 });
 
 bot.on("callback_query", async (msg) => {
-  const command = msg.data[0] === "{" ? JSON.parse(msg.data).command : msg.data;
+  const command = msg.data;
 
   switch (command) {
     case "/choosemusclegroup":
       await ChooseMuscleGroupView(bot, msg);
-      break;
-    case "/exercises":
-      await ExerciseView(bot, msg);
       break;
     case "/stop":
       await StopView(bot, msg);
