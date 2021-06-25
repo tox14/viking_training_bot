@@ -3,9 +3,9 @@ module.exports = async (bot, message) => {
 
   const options = {
     reply_markup: JSON.stringify({
-      inline_keyboard: [
-        [{ text: "👊 Start exercising", callback_data: "/choosemusclegroup" }],
-      ],
+      keyboard: [["👊 Start exercising"]],
+      one_time_keyboard: true,
+      resize_keyboard: true,
     }),
   };
 

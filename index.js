@@ -14,10 +14,6 @@ const bot = new TelegramApi(process.env.TOKEN, { polling: true });
 bot.setMyCommands([
   { command: "/start", description: "Start using the Viking Training Bot" },
   {
-    command: "/choosemusclegroup",
-    description: "Select the muscle group you want to work on",
-  },
-  {
     command: "/stop",
     description: "Stop training",
   },
@@ -28,7 +24,7 @@ bot.on("message", async (msg) => {
     case "/start":
       await StartView(bot, msg);
       break;
-    case "/choosemusclegroup":
+    case "👊 Start exercising":
       await ChooseMuscleGroupView(bot, msg);
       break;
     case "/stop":
