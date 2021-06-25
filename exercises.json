@@ -1,5 +1,5 @@
 {
-  "arms": [
+  "Arms": [
     { "name": "One Arm Concentration Curls", "image": "resources/One+Arm+Concentration+Curls.jpg" },
     { "name": "Seated Incline Dumbbell Biceps Hammer Curl", "image": "resources/Seated+Incline+Dumbbell+Biceps+Hammer+Curl.png" },
     { "name": "Seated Incline Dumbbell Biceps Curl", "image": "resources/Seated+Incline+Dumbbell+Biceps+Curl.jpg" },
@@ -19,7 +19,7 @@
     { "name": "Barbell Bench Palms Up Wrist Curl", "image": "resources/Barbell+Bench+Palms+Up+Wrist+Curl.png" },
     { "name": "Seated Palms Up Wrist Curl", "image": "resources/Seated+Palms+Up+Wrist+Curl.png" }
   ],
-  "shoulders": [
+  "Shoulders": [
     { "name": "Seated Smith Machine Shoulder Press", "image": "resources/Smith+Machine+Shoulder+Press.jpg" },
     { "name": "Seated Shoulder Press Machine", "image": "resources/Shoulder+Press+Machine.jpg" },
     { "name": "Seated Barbell Shoulder Press", "image": "resources/Seated+Overhead+Barbell+Press.jpg" },
@@ -55,7 +55,7 @@
     { "name": "Standing Cable Upright Rows", "image": "resources/Cable+Upright+Rows.jpg" },
     { "name": "Standing Narrow-Grip Upright Rows", "image": "resources/Standing+Narrow-Grip+Upright+Rows.png" }
   ],
-  "chest": [
+  "Chest": [
     { "name": "Incline Dumbbell Chest Press", "image": "resources/Incline+Dumbbell+Chest+Press.jpg" },
     { "name": "Incline Smith Machine Chest Press", "image": "resources/Incline+Smith+Machine+Press.jpg" },
     { "name": "Flat Barbell Chest Press", "image": "resources/Flat+Barbell+Chest+Press.jpg" },
@@ -70,7 +70,7 @@
     { "name": "Clock Push Ups", "image": "resources/Narrow-Hand+Push+Ups.png" },
     { "name": "Wide-Hand Push Up", "image": "resources/Wide-Hand+Push+Up.jpg" }
   ],
-  "core": [
+  "Core": [
     { "name": "Bench V-Sit Crunches", "image": "resources/Bench+V-Sit+Crunches.jpg" },
     { "name": "Raised Legs Cross Body Crunches", "image": "resources/Raised+Legs+Cross+Body+Crunches.jpg" },
     { "name": "Decline Sit Ups", "image": "resources/Decline+Sit+Ups.jpg" },
@@ -94,7 +94,7 @@
     { "name": "Crunches", "image": "resources/Crunches.jpg" },
     { "name": "Tuck Crunch", "image": "resources/Tuck+Crunch.png" }
   ],
-  "back": [
+  "Back": [
     { "name": "Assisted Wide Grip Overhand Chin Ups", "image": "resources/Assisted+Wide+Grip+Overhand+Chin-Ups.jpg" },
     { "name": "Assisted Close Grip Underhand Chin-Ups", "image": "resources/Assisted+Close+Grip+Underhand+Chin-Ups.png" },
     { "name": "Wide Overhand Grip Lat Pulldown", "image": "resources/Overhand+Grip+Lat+Pulldown.jpg" },
@@ -109,7 +109,7 @@
     { "name": "Standing Cable Rope Lat Pushdown", "image": "resources/Standing+Cable+Rope+Lat+Pushdown.png" },
     { "name": "Smith Machine Deadlifts", "image": "resources/Smith+Machine+Deadlifts_.jpg" }
   ],
-  "legsandglut": [
+  "Legs and Glutes": [
     { "name": "Glute Bridge", "image": "resources/Glute+Bridges.jpg" },
     { "name": "Barbell Hip Thrust", "image": "resources/Barbell+Hip+Thrust.png" },
     { "name": "Mountain Climbers", "image": "resources/Mountain+Climbers.jpg" },

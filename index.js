@@ -25,36 +25,29 @@ bot.on("message", async (msg) => {
       await StartView(bot, msg);
       break;
     case "👊 Start exercising":
+    case "🔄 Change group":
       await ChooseMuscleGroupView(bot, msg);
       break;
     case "💪 Arms":
+    case "✅ Next exercise: Arms":
     case "💪 Shoulders":
+    case "✅ Next exercise: Shoulders":
     case "💪 Chest":
+    case "✅ Next exercise: Chest":
     case "💪 Core":
+    case "✅ Next exercise: Core":
     case "💪 Back":
+    case "✅ Next exercise: Back":
     case "💪 Legs and Glutes":
+    case "✅ Next exercise: Legs and Glutes":
       await ExerciseView(bot, msg);
       break;
     case "/stop":
+    case "❌ Stop":
       await StopView(bot, msg);
       break;
     default:
       await WrongCommandView(bot, msg);
-      break;
-  }
-});
-
-bot.on("callback_query", async (msg) => {
-  const command = msg.data;
-
-  switch (command) {
-    case "/choosemusclegroup":
-      await ChooseMuscleGroupView(bot, msg);
-      break;
-    case "/stop":
-      await StopView(bot, msg);
-      break;
-    default:
       break;
   }
 });

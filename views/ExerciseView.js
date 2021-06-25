@@ -1,8 +1,7 @@
 const exercises = require("../exercises.json");
 
 module.exports = async (bot, message) => {
-  const chatId = message.chat.id;
-  const type = message.text.split("💪 ")[1].replace(/ /g, "").toLowerCase();
+  const type = message.text.split("💪 ")[1] || message.text.split(": ")[1];
 
   const exercisesForSelectedType = exercises[type];
   const exercise =
@@ -14,28 +13,13 @@ module.exports = async (bot, message) => {
     caption: `*${exercise.name}*`,
     parse_mode: "markdown",
     reply_markup: JSON.stringify({
-      inline_keyboard: [
-        [
-          {
-            text: "✅ Next exercise",
-            callback_data: JSON.stringify({
-              command: "/exercises",
-              type,
-            }),
-          },
-        ],
-        [
-          {
-            text: "🔄 Change group",
-            callback_data: "/choosemusclegroup",
-          },
-          { text: "❌ Stop exercising", callback_data: "/stop" },
-        ],
-      ],
+      keyboard: [["✅ Next exercise: " + type], ["🔄 Change group", "❌ Stop"]],
+      one_time_keyboard: true,
+      resize_keyboard: true,
     }),
   };
 
   if (type) {
-    await bot.sendPhoto(chatId, exercise.image, options);
+    await bot.sendPhoto(message.chat.id, exercise.image, options);
   }
 };

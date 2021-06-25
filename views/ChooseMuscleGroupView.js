@@ -1,6 +1,4 @@
 module.exports = async (bot, message) => {
-  const chatId = message.data ? message.message.chat.id : message.chat.id;
-
   const options = {
     reply_markup: JSON.stringify({
       keyboard: [
@@ -14,7 +12,7 @@ module.exports = async (bot, message) => {
   };
 
   await bot.sendMessage(
-    chatId,
+    message.chat.id,
     "Pick a muscle group you want to work on!",
     options
   );
