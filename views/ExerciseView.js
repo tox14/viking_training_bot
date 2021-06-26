@@ -5,11 +5,11 @@ module.exports = async (bot, message) => {
   const chatId = message.chat.id;
   const type = message.text.split("💪 ")[1] || message.text.split(": ")[1];
 
-  let exercisesForSelectedType = exercises[type];
+  let exercisesForType = exercises[type];
 
   // We need to filter last 5 exercise
   const lastFiveExercises = await ExercisesModel.findAll({
-    attributes: ["exercise", "datetime"],
+    attributes: ["exercise"],
     where: {
       chatId: chatId.toString(),
       group: type,
@@ -18,15 +18,17 @@ module.exports = async (bot, message) => {
     limit: 5,
   });
   if (lastFiveExercises.length) {
-    exercisesForSelectedType = exercisesForSelectedType.filter((exercise) => {
-      return !lastFiveExercises.find((e) => exercise.name === e.exercise);
+    const lastFiveExercisesObj = {};
+    lastFiveExercises.forEach(({ exercise }) => {
+      lastFiveExercisesObj[exercise] = true;
+    });
+    exercisesForType = exercisesForType.filter((exercise) => {
+      return !lastFiveExercisesObj[exercise.name];
     });
   }
 
-  const randomIndex = Math.floor(
-    Math.random() * exercisesForSelectedType.length
-  );
-  const exercise = exercisesForSelectedType[randomIndex];
+  const randomIndex = Math.floor(Math.random() * exercisesForType.length);
+  const exercise = exercisesForType[randomIndex];
 
   await ExercisesModel.create({
     chatId,
