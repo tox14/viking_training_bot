@@ -3,6 +3,7 @@ const ChooseMuscleGroupView = require("./ChooseMuscleGroupView");
 const ExerciseView = require("./ExerciseView");
 const StopView = require("./StopView");
 const WrongCommandView = require("./WrongCommandView");
+const StatsView = require("./StatsView");
 
 module.exports = {
   StartView,
@@ -10,4 +11,5 @@ module.exports = {
   ExerciseView,
   StopView,
   WrongCommandView,
+  StatsView,
 };

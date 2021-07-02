@@ -8,6 +8,7 @@ const {
   ExerciseView,
   StopView,
   WrongCommandView,
+  StatsView,
 } = require("./views");
 
 const bot = new TelegramApi(process.env.TOKEN, { polling: true });
@@ -19,7 +20,11 @@ const start = async () => {
     await sequalize.sync();
 
     bot.setMyCommands([
-      { command: "/start", description: "Start using the Viking Training Bot" },
+      { command: "/start", description: "Start training" },
+      {
+        command: "/stats",
+        description: "Show your stats",
+      },
       {
         command: "/stop",
         description: "Stop training",
@@ -48,6 +53,9 @@ const start = async () => {
         case "💪 Legs and Glutes":
         case "✅ Next exercise: Legs and Glutes":
           await ExerciseView(bot, msg);
+          break;
+        case "/stats":
+          await StatsView(bot, msg);
           break;
         case "/stop":
         case "❌ Stop":
