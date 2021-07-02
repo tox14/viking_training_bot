@@ -15,6 +15,7 @@ app.listen(port, () => {
 
 module.exports = (bot) => {
   app.post("/" + bot.token, (req, res) => {
+    console.log(req.body);
     bot.processUpdate(req.body);
     res.sendStatus(200);
   });
