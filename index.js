@@ -11,7 +11,14 @@ const {
   StatsView,
 } = require("./views");
 
-const bot = new TelegramApi(process.env.TOKEN, { polling: true });
+const token = process.env.TOKEN;
+let bot;
+if (process.env.NODE_ENV === "production") {
+  bot = new TelegramApi(token);
+  bot.setWebHook(process.env.HEROKU_URL + bot.token);
+} else {
+  bot = new TelegramApi(token, { polling: true });
+}
 
 const start = async () => {
   try {
