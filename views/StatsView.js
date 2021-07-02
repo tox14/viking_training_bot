@@ -65,16 +65,23 @@ module.exports = async (bot, message) => {
     stats[group].month = count;
   });
 
-  const request = `
-*Exercises* per _Day_ / _Week_ / _Month_
+  const dataString = Object.keys(stats)
+    .sort((a, b) => {
+      if (Number(stats[a].month) < Number(stats[b].month)) {
+        return 1;
+      }
+      if (Number(stats[a].month) > Number(stats[b].month)) {
+        return -1;
+      }
+      return 0;
+    })
+    .map(
+      (key) =>
+        `*${key}*: _${stats[key].day}_ / _${stats[key].week}_ / _${stats[key].month}_\n`
+    )
+    .join("");
 
-${Object.keys(stats)
-  .map(
-    (key) =>
-      `*${key}*: _${stats[key].day}_ / _${stats[key].week}_ / _${stats[key].month}_\n`
-  )
-  .join("")}
-  `;
+  const request = `*Exercises* per _Day_ / _Week_ / _Month_\n\n${dataString}`;
 
   bot.sendMessage(chatId, request, options);
 };
