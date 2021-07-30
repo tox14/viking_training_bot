@@ -1,22 +1,29 @@
 {
   "name": "vikingbot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.4.0",
+  "description": "Telegram bot for selecting exercises for different muscle groups",
   "main": "index.js",
   "scripts": {
     "dev": "set NODE_ENV=develop && nodemon index.js",
     "start": "set NODE_ENV=production && node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "sport",
+    "training",
+    "exercises",
+    "telegram",
+    "bot",
+    "node-telegram-bot-api"
+  ],
+  "author": "Anton Chernookiy @tox14",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "node-telegram-bot-api": "^0.53.0",
-    "nodemon": "^2.0.7",
-    "pg": "^8.6.0",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.6.2"
+    "node-telegram-bot-api": "^0.54.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
